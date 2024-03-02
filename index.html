@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,25 +8,146 @@
     <link rel="stylesheet" href="/styles/index.css">
     <link rel="stylesheet" href="/styles/utilities.css">
     <link rel="stylesheet" href="/styles/colors.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
     <header>
-        <nav>
+        <div class="header-top-container">
             <div class="logo-container">
                 <img class="logo" src="/assets/logo-light.png" alt="bdd-logo">
             </div>
-            <ul class="container">
-                <li class="nav-link white-text">Discover BDD</li>
-                <li class="nav-link white-text">Our Products % Services</li>
-                <li class="nav-link white-text">BDD Academy</li>
-                <li class="nav-link white-text">Blog</li>
-                <li class="nav-link white-text">Career Portal</li>
-                <li class="nav-link white-text">Join Us</li>
+            <div class="toggler white-text">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a class="nav-link white-text">Discover BDD
+                            <span><i class="fa-solid fa-angle-down white-text"></i></span>
+                        </a>
+                        <ul class="dropdown-items gray-text white-bg">
+                            <li>Our Winning Formula</li>
+                            <li>Social Well Being</li>
+                            <li>Our Story</li>
+                            <li>Communtiy Members</li>
+                            <li>Partners</li>
+                            <li>Testimonials</li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link white-text">Our Products & Services
+                            <span><i class="fa-solid fa-angle-down white-text"></i></span>
+                        </a>
+                    </li>
+                    <li><a class="nav-link white-text">BDD Academy</a></li>
+                    <li><a class="nav-link white-text">Blog</a></li>
+                    <li><a class="nav-link white-text">Career Portal</a></li>
+                    <li><a class="nav-link white-text primary-bg">Join Us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-toggler white-bg">
+            <ul class="toggler-links">
+                <li><a class="toggler-link secondary-text">Discover BDD</a></li>
+                <li><a class="toggler-link secondary-text">Our Products & Services</a></li>
+                <li><a class="toggler-link secondary-text">BDD Academy</a></li>
+                <li><a class="toggler-link secondary-text">Blog</a></li>
+                <li><a class="toggler-link secondary-text">Career Portal</a></li>
+                <li><a class="toggler-link secondary-text">Join Us</a></li>
             </ul>
-        </nav>
-        <div class="hero">
-            <img class="hero-image" src="/assets/hero.jpg" alt="header image">
+        </div>
+        <div class="header-text white-text">
+            <p>A UNIQUE DIGITAL CLUSTER</p>
+            <p> DESIGNED FOR A COMMUNITY OF BUSINESSES AND INNOVATORS</p>
         </div>
     </header>
+    <main>
+        <section class="foundations gray-bg">
+            <div class="foundations-heading">
+                <h1>BDD IS BUILT ON FIVE SOLID FOUNDAITONS</h1>
+            </div>
+            <div class="foundation-cards">
+                <div class="foundation-card white-bg">
+                    <img class="foundation-img" src="/assets/1.png" alt="community">
+                    <h4 class="foundation-heading primary-text">Community</h4>
+                    <p class="foundation-text secondary-text">
+                        An environment catering to creative minds, providing the framework for ambitious and sustainable communities. BDD creates a community for collaboration, facilitates the sharing of ideas and connects decision makers with entrepreneurs.
+                    </p>
+                </div>
+                <div class="foundation-card white-bg">
+                    <img class="foundation-img" src="/assets/2.png" alt="sharing economy">
+                    <h4 class="foundation-heading primary-text">Sharing Economy</h4>
+                    <p class="foundation-text secondary-text">
+                        An environment catering to creative minds, providing the framework for ambitious and sustainable communities. BDD creates a community for collaboration, facilitates the sharing of ideas and connects decision makers with entrepreneurs.
+                    </p>
+                </div>
+                <div class="foundation-card white-bg">
+                    <img class="foundation-img" src="/assets/3.png" alt="smart design">
+                    <h4 class="foundation-heading primary-text">Smart Design</h4>
+                    <p class="foundation-text secondary-text">
+                        An environment catering to creative minds, providing the framework for ambitious and sustainable communities. BDD creates a community for collaboration, facilitates the sharing of ideas and connects decision makers with entrepreneurs.
+                    </p>
+                </div>
+                <div class="foundation-card white-bg">
+                    <img class="foundation-img" src="/assets/4.png" alt="sustainability">
+                    <h4 class="foundation-heading primary-text">Sustainability</h4>
+                    <p class="foundation-text secondary-text">
+                        An environment catering to creative minds, providing the framework for ambitious and sustainable communities. BDD creates a community for collaboration, facilitates the sharing of ideas and connects decision makers with entrepreneurs.
+                    </p>
+                </div>
+                <div class="foundation-card white-bg">
+                    <img class="foundation-img" src="/assets/5.png" alt="social well being">
+                    <h4 class="foundation-heading primary-text">Social Well Being</h4>
+                    <p class="foundation-text secondary-text">
+                        An environment catering to creative minds, providing the framework for ambitious and sustainable communities. BDD creates a community for collaboration, facilitates the sharing of ideas and connects decision makers with entrepreneurs.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="join-community">
+            <div class="community-img">
+                <img src="/assets/join-bdd-1-768x626.png" alt="join our community">
+            </div>
+            <div class="community-cards">
+                <div class="community-card">
+                    <h3 class="community-heading">Private Offices</h3>
+                    <div class="community-text">
+                        <a><span><i class="fa-solid fa-play"></i></span> Ready to move in offices for startups</a>
+                        <a><span><i class="fa-solid fa-play"></i></span> Customizable offices for medium to large companies</a>
+                        <a><span><i class="fa-solid fa-play"></i></span> Investment opportunities in premium commercial real estate</a>      
+                    </div>
+                    <button class="community-btn primary-bg white-text">Know More</button>
+                </div>
+                <div class="community-card">
+                    <h3 class="community-heading">Private Offices</h3>
+                    <div class="community-text">
+                        <a><span><i class="fa-solid fa-play"></i></span> Ready to move in offices for startups</a>
+                        <a><span><i class="fa-solid fa-play"></i></span> Customizable offices for medium to large companies</a>
+                        <a><span><i class="fa-solid fa-play"></i></span> Investment opportunities in premium commercial real estate</a>      
+                    </div>
+                    <button class="community-btn primary-bg white-text">Know More</button>
+                </div>
+                <div class="community-card">
+                    <h3 class="community-heading">Private Offices</h3>
+                    <div class="community-text">
+                        <a><span><i class="fa-solid fa-play"></i></span> Ready to move in offices for startups</a>
+                        <a><span><i class="fa-solid fa-play"></i></span> Customizable offices for medium to large companies</a>
+                        <a><span><i class="fa-solid fa-play"></i></span> Investment opportunities in premium commercial real estate</a>      
+                    </div>
+                    <button class="community-btn primary-bg white-text">Know More</button>
+                </div>
+                <div class="community-card">
+                    <h3 class="community-heading">Private Offices</h3>
+                    <div class="community-text">
+                        <a><span><i class="fa-solid fa-play"></i></span> Ready to move in offices for startups</a>
+                        <a><span><i class="fa-solid fa-play"></i></span> Customizable offices for medium to large companies</a>
+                        <a><span><i class="fa-solid fa-play"></i></span> Investment opportunities in premium commercial real estate</a>      
+                    </div>
+                    <button class="community-btn primary-bg white-text">Know More</button>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>

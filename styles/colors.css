@@ -3,9 +3,12 @@
 }
 
 .gray-bg {
-    background-color: #334155;
+    background-color: #f5f5f5;
 }
 
+.white-bg {
+    background-color: #ffffff;
+}
 
 .white-text {
     color: #ffffff;
