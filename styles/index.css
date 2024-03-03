@@ -16,7 +16,8 @@ header {
     height: 100vh;
     background-image: linear-gradient(rgba(34, 34, 34, 0.3),
             rgba(34, 34, 34, 0.3)),
-        url(/assets/hero.jpg);
+        url(/assets/hero0.jpg);
+    transition: background-image 0.25s ease-in-out;
     background-size: cover;
 }
 
@@ -31,6 +32,7 @@ nav {
 }
 
 .navbar {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -126,11 +128,18 @@ button {
     display: none;
 }
 
-.header-toggler {
-    display: none;
+.toggler-header {
     text-align: left;
     width: 100%;
     padding: 16px;
+    position: absolute;
+    top: 160px;
+    left: 0;
+}
+
+.toggler-header li:last-child a {
+    border-radius: 24px;
+    padding: 12px 32px;
 }
 
 .toggler-links li {
@@ -151,6 +160,7 @@ button {
 .logo-altern {
     max-width: 80px;
     padding: 8px 0;
+    display: none;
 }
 
 .foundations {
@@ -181,15 +191,19 @@ button {
 .foundation-card:nth-child(1):hover {
     background-color: #e3fafc50;
 }
+
 .foundation-card:nth-child(2):hover {
     background-color: #e6fcf550;
 }
+
 .foundation-card:nth-child(3):hover {
     background-color: #fff9db50;
 }
+
 .foundation-card:nth-child(4):hover {
     background-color: #f8f0fc75;
 }
+
 .foundation-card:nth-child(5):hover {
     background-color: #f4fce350;
 }
@@ -259,6 +273,10 @@ button {
     margin: 16px 20px;
 }
 
+.community-apps img:hover {
+    cursor: pointer;
+}
+
 .community-img {
     flex-grow: 0;
 }
@@ -283,7 +301,8 @@ button {
     justify-content: space-between;
     height: 100%;
     border: 1px solid #33415513;
-    box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    box-shadow: 0 0px 30px 0 rgba(0, 0, 0, 0.05);
     padding: 32px 24px;
 }
 
@@ -293,7 +312,7 @@ button {
 }
 
 .community-card-heading {
-    margin: 32px 0 12px 0;
+    margin-top: 32px;
     text-transform: uppercase;
 }
 
@@ -320,7 +339,8 @@ button {
 }
 
 .community-btn:hover {
-    box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.25);
 }
 
 .milestone {
@@ -351,7 +371,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 32px;
+    gap: 98px;
 }
 
 .milestone-detail {
@@ -363,6 +383,7 @@ button {
 }
 
 .milestone-detail h4 {
+    text-align: center;
     max-width: 240px
 }
 
@@ -453,7 +474,7 @@ button {
 }
 
 .trending-btn:hover {
-    background: #000;
+    background: #4da8ff;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
@@ -486,14 +507,19 @@ button {
     padding: 48px 32px;
 }
 
-.testimonials-main {
+.testimonials-imgs-inner-container {
     display: flex;
-    align-items: stretch;
     justify-content: center;
+    gap: 8px;
 }
 
 .testimonials-imgs img {
     height: 200px;
+    cursor: pointer;
+}
+
+.testimonials-imgs img:hover .testimonials-text-overlay {
+    transform: translateY(0);
 }
 
 .testimonials-imgs {
@@ -503,15 +529,14 @@ button {
     gap: 12px;
 }
 
-.testimonials-imgs-inner-container {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
+.testimonials-heading {
+    width: 22%;
+    padding: 8px;
 }
 
 .testimonials-heading h1 {
     font-size: 28px;
-    max-width: 70%;
+    max-width: 100%;
 }
 
 footer {
@@ -577,7 +602,7 @@ footer li {
 }
 
 
-.footer-apps-logos img{
+.footer-apps-logos img {
     max-height: 54px;
 }
 
@@ -586,7 +611,7 @@ footer li {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:50%;
+    gap: 50%;
 }
 
 .footer-footer-social {
@@ -596,6 +621,18 @@ footer li {
     gap: 24px;
 }
 
+.scroller {
+    padding: 8px;
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
 
 
 @media screen and (max-width: 1245px) {
@@ -629,13 +666,24 @@ footer li {
         max-width: unset;
         width: 49%;
         height: 50%;
+        padding: 32px 64px;
+    }
+
+    .community-btn {
+        min-width: 40%;
+        margin: 0 auto;
     }
 
     .trending-cards>:last-child {
         display: none;
     }
 
+    .testimonials-heading {
+        width: 100%;
+    }
+
     .testimonials-heading h1 {
+        text-align: center;
         font-size: 20px;
     }
 
@@ -679,7 +727,7 @@ footer li {
         display: none;
     }
 
-    .testimonials-main {
+    .testimonials {
         flex-direction: column;
         align-items: stretch;
     }
@@ -689,7 +737,7 @@ footer li {
         max-width: 100%;
         padding: 16px 0;
     }
-    
+
     .testimonials-imgs-inner-container {
         width: 100%;
     }
@@ -739,7 +787,7 @@ footer li {
         align-items: unset;
         justify-content: center;
         padding: 0 32px;
-        gap:0;
+        gap: 0;
     }
 
     .footer-footer {

@@ -17,11 +17,10 @@
             <div class="navbar" id="navbar">
                 <div class="logo-container">
                     <img class="logo" id="logo" src="/assets/logo-light.png" alt="bdd-logo">
-                    <img class="logo-altern" id="logo-altern" src="/assets/logo-footer.png" alt="bdd-altern-logo"
-                        class="logo-altern">
+                    <img class="logo-altern" id="logo-altern" src="/assets/logo-footer.png" alt="bdd-altern-logo">
                 </div>
                 <div class="toggler white-text">
-                    <i class="fa-solid fa-bars"></i>
+                    <i class="toggler-open fa-solid fa-bars"></i>
                 </div>
                 <nav>
                     <ul class="nav-links">
@@ -56,14 +55,14 @@
                         <li><a class="nav-link white-text primary-bg">Join Us</a></li>
                     </ul>
                 </nav>
-                <div class="header-toggler white-bg">
+                <div class="toggler-header hidden white-bg" id="toggler-header">
                     <ul class="toggler-links">
                         <li><a class="toggler-link secondary-text">Discover BDD</a></li>
                         <li><a class="toggler-link secondary-text">Our Products & Services</a></li>
                         <li><a class="toggler-link secondary-text">BDD Academy</a></li>
                         <li><a class="toggler-link secondary-text">Blog</a></li>
                         <li><a class="toggler-link secondary-text">Career Portal</a></li>
-                        <li><a class="toggler-link secondary-text">Join Us</a></li>
+                        <li><a class="toggler-link primary-bg white-text">Join Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -284,24 +283,25 @@
             </div>
         </section>
         <section class="testimonials">
-            <div class="testimonials-main">
-                <div class="testimonials-heading">
-                    <h1>A FEW WORDS FROM OUR COMMUNITY</h1>
+            <div class="testimonials-heading">
+                <h1>A FEW WORDS FROM OUR COMMUNITY</h1>
+            </div>
+            <div class="testimonials-imgs">
+                <div class="testimonials-imgs-inner-container">
+                    <img src="/assets/testimonial-img.jpg" alt="testimonial-1">
+                    <img src="/assets/testimonial-img.jpg" alt="testimonial-2">
+                    <img src="/assets/testimonial-img.jpg" alt="testimonial-3">
+                    <div class="testimonials-text-overlay">
+                        <h5>Testimonial: BDD x CME</h5>
+                    </div>
                 </div>
-                <div class="testimonials-imgs">
-                    <div class="testimonials-imgs-inner-container">
-                        <img src="/assets/testimonial-img.jpg" alt="testimonial-1">
-                        <img src="/assets/testimonial-img.jpg" alt="testimonial-2">
-                        <img src="/assets/testimonial-img.jpg" alt="testimonial-3">
-                    </div>
-                    <div class="testimonials-dots">
-                        <button class="testimonials-dot">&nbsp;</button>
-                        <button class="testimonials-dot">&nbsp;</button>
-                        <button class="testimonials-dot">&nbsp;</button>
-                        <button class="testimonials-dot">&nbsp;</button>
-                        <button class="testimonials-dot">&nbsp;</button>
-                        <button class="testimonials-dot">&nbsp;</button>
-                    </div>
+                <div class="testimonials-dots">
+                    <button class="testimonials-dot">&nbsp;</button>
+                    <button class="testimonials-dot">&nbsp;</button>
+                    <button class="testimonials-dot">&nbsp;</button>
+                    <button class="testimonials-dot">&nbsp;</button>
+                    <button class="testimonials-dot">&nbsp;</button>
+                    <button class="testimonials-dot">&nbsp;</button>
                 </div>
             </div>
         </section>
@@ -347,7 +347,7 @@
                     <h4 class="contact-header secondary-text">SUBSCRIBE TO OUR NEWSLETTER</h4>
                     <div class="contact-details">
                         <ul>
-                            <li><span><i class="fa-regular fa-envelope"></i></span> bdd@beirutdigitaldistrict.com</a>
+                            <li><span><i class="fa-regular fa-envelope"></i></span> bdd@beirutdigitaldistrict.com</li>
                             <li><span><i class="fa-solid fa-phone"></i></span> +9611660941</li>
                         </ul>
                     </div>
@@ -376,7 +376,9 @@
                 </div>
             </div>
         </footer>
-        <button><i class="fa-solid fa-chevron-up"></i></button>
+        <div id="scroller">
+            <i class="scroller primary-bg white-text fa-solid fa-chevron-up"></i>
+        </div>
     </main>
     <script src="/scripts/index.js"></script>
 </body>
