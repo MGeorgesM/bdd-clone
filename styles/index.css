@@ -5,7 +5,7 @@
 }
 
 html {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Lato", sans-serif;
 }
 
 header {
@@ -23,7 +23,6 @@ header {
 
 .header-text {
     font-size: 36px;
-    font-weight: bold;
     text-align: center;
 }
 
@@ -52,7 +51,8 @@ nav {
 }
 
 .nav-link {
-    font-weight: 700;
+    font-size: 14px;
+    font-weight: 600;
     padding: 12px 14px;
 }
 
@@ -107,6 +107,7 @@ button {
 }
 
 .dropdown-items li {
+    font-weight: 400;
     text-transform: none;
     padding: 16px 16px;
 }
@@ -137,12 +138,22 @@ button {
     left: 0;
 }
 
+.toggler-header li:hover {
+    cursor: pointer;
+}
+
 .toggler-header li:last-child a {
     border-radius: 24px;
     padding: 12px 32px;
 }
 
+.toggler-header li:last-child {
+    padding-left: 0;
+}
+
 .toggler-links li {
+    font-size: 12px;
+    font-weight: 600;
     padding: 16px;
 }
 
@@ -216,6 +227,7 @@ button {
 .foundation-heading {
     margin: 8px;
     font-size: 16px;
+    font-style: bold;
     text-transform: uppercase;
 }
 
@@ -292,6 +304,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 610px;
     gap: 12px;
 }
 
@@ -304,17 +317,18 @@ button {
     height: 100%;
     border: 1px solid #33415513;
     border-radius: 6px;
-    box-shadow: 0 0px 30px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.05);
     padding: 32px 24px;
 }
 
 .community-card:hover {
     box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.2);
-    transform: translatey(-2%);
+    transform: translatey(-1%);
 }
 
 .community-card-heading {
     margin-top: 32px;
+    margin-bottom: 4px;
     text-transform: uppercase;
 }
 
@@ -325,7 +339,7 @@ button {
 .community-text li {
     background-image: url(/assets/bullet-point.png);
     background-repeat: no-repeat;
-    background-position: 0 10px;
+    background-position: 0 13px;
     padding: 8px 16px;
 }
 
@@ -371,7 +385,7 @@ button {
 
 .milestone-main {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: center;
     gap: 98px;
 }
@@ -415,7 +429,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 16px;
+    gap: 24px;
 }
 
 .trending-card {
@@ -424,7 +438,7 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.05);
 }
 
 .trending-card-img img {
@@ -481,6 +495,12 @@ button {
     cursor: pointer;
 }
 
+.trending-btn-left:hover,
+.trending-btn-right:hover {
+    background: #4da8ff;
+    cursor: pointer;
+}
+
 .trending-btn-left,
 .trending-btn-right {
     padding: 8px;
@@ -527,7 +547,7 @@ button {
     gap: 8px;
 }
 
-.testimonials-text-overlay {
+/* .testimonials-text-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -535,7 +555,7 @@ button {
     background-color: rgba(0, 0, 0, 0.7);
     transform: translateY(100%);
     transition: transform 0.25s ease;
-}
+} */
 
 .testimonials-heading {
     width: 22%;
@@ -543,6 +563,7 @@ button {
 }
 
 .testimonials-heading h1 {
+
     font-size: 28px;
     max-width: 100%;
 }
@@ -562,10 +583,11 @@ footer li {
 }
 
 .footer-main {
+
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 160px;
+    gap: 128px;
 }
 
 .sitemap {
@@ -573,9 +595,11 @@ footer li {
     flex-direction: column;
     align-items: left;
     justify-content: center;
+    width: 50%;
 }
 
 .sitemap-header {
+    text-align: center;
     margin-bottom: 16px;
 }
 
@@ -583,12 +607,14 @@ footer li {
     display: flex;
     align-items: top;
     justify-content: center;
-    gap: 28px;
+    gap: 32px;
 }
 
 .contact {
     display: flex;
     flex-direction: column;
+    width: 33%;
+
 }
 
 .footer-apps {
@@ -625,7 +651,7 @@ footer ul li:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50%;
+    gap: 33%;
 }
 
 .footer-footer-social {
@@ -633,6 +659,16 @@ footer ul li:hover {
     justify-content: center;
     align-items: center;
     gap: 24px;
+    width: 33%;
+}
+
+.footer-footer-social:hover i {
+    cursor: pointer;
+}
+
+.footer-footer-text {
+    text-align: center;
+    width: 33%;
 }
 
 .scroller {
@@ -649,7 +685,7 @@ footer ul li:hover {
 }
 
 
-@media screen and (max-width: 1245px) {
+@media screen and (max-width: 1285px) {
     .header-top-container {
         width: 100%;
         justify-content: space-between;
@@ -672,6 +708,7 @@ footer ul li:hover {
     }
 
     .community-cards {
+        height: auto;
         flex-wrap: wrap;
         justify-content: space-between;
     }
@@ -679,12 +716,12 @@ footer ul li:hover {
     .community-card {
         max-width: unset;
         width: 49%;
-        height: 50%;
+        height: 50vh;
         padding: 32px 64px;
     }
 
     .community-btn {
-        min-width: 40%;
+        min-width: 30%;
         margin: 0 auto;
     }
 
@@ -697,7 +734,6 @@ footer ul li:hover {
     }
 
     .testimonials-heading h1 {
-        text-align: center;
         font-size: 20px;
     }
 
@@ -705,9 +741,30 @@ footer ul li:hover {
         gap: 96px;
     }
 
+    .sitemap {
+        width:unset;
+    }
+
+    .sitemap-header {
+        text-align: left;
+    }
+
+    .contact {
+        width: unset;
+        margin-left: 0;
+    }
+
     .footer-footer {
         padding: 0 32px;
         justify-content: space-between;
+    }
+
+    .footer-footer-social {
+        width: unset;
+    }
+
+    .footer-footer-text {
+        width: unset;
     }
 }
 
@@ -782,9 +839,9 @@ footer ul li:hover {
     .footer-main {
         gap: 0;
     }
-    
+
     .sitemap-main {
-        gap: 0;
+        gap: 8px;
     }
 
 }
@@ -797,7 +854,7 @@ footer ul li:hover {
 
     .community-card {
         width: 100%;
-        height: auto;
+        height: 35vh;
         box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
     }
 
@@ -806,6 +863,7 @@ footer ul li:hover {
     }
 
     .milestone-main {
+        align-items: center;
         flex-direction: column;
         margin-bottom: 48px;
     }

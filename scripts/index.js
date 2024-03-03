@@ -9,9 +9,6 @@ const scroller = document.getElementById('scroller');
 const heroImages = ['/assets/hero0.jpg', '/assets/hero1.jpg'];
 let index = 0;
 
-
-console.log(header)
-
 function changeHeroImages() {
     header.style.backgroundImage = `linear-gradient(rgba(34, 34, 34, 0.3),
     rgba(34, 34, 34, 0.3)), url(${heroImages[index]})`;
