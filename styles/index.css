@@ -155,6 +155,7 @@ button {
     padding: 16px 0;
     width: 94px;
     margin-right: 32px;
+    transition: opacity 0.25s ease;
 }
 
 .logo-altern {
@@ -235,6 +236,7 @@ button {
 .explore-video img {
     max-height: 370px;
     object-fit: cover;
+    cursor: pointer;
 }
 
 .explore-heading {
@@ -323,8 +325,8 @@ button {
 .community-text li {
     background-image: url(/assets/bullet-point.png);
     background-repeat: no-repeat;
-    background-position: 0 20px;
-    padding: 16px;
+    background-position: 0 10px;
+    padding: 8px 16px;
 }
 
 .community-text a {
@@ -507,10 +509,11 @@ button {
     padding: 48px 32px;
 }
 
-.testimonials-imgs-inner-container {
+.testimonials-imgs {
     display: flex;
-    justify-content: center;
-    gap: 8px;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
 }
 
 .testimonials-imgs img {
@@ -518,15 +521,20 @@ button {
     cursor: pointer;
 }
 
-.testimonials-imgs img:hover .testimonials-text-overlay {
-    transform: translateY(0);
+.testimonials-imgs-inner-container {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
 }
 
-.testimonials-imgs {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
+.testimonials-text-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: translateY(100%);
+    transition: transform 0.25s ease;
 }
 
 .testimonials-heading {
@@ -601,8 +609,14 @@ footer li {
     margin-left: 0;
 }
 
+footer ul li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 
 .footer-apps-logos img {
+    cursor: pointer;
     max-height: 54px;
 }
 
@@ -690,6 +704,11 @@ footer li {
     .footer-main {
         gap: 96px;
     }
+
+    .footer-footer {
+        padding: 0 32px;
+        justify-content: space-between;
+    }
 }
 
 @media screen and (max-width: 980px) {
@@ -750,6 +769,24 @@ footer li {
     .testimonials-imgs-inner-container>:last-child {
         display: none;
     }
+
+    footer {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .footer-footer {
+        padding-left: 0;
+    }
+
+    .footer-main {
+        gap: 0;
+    }
+    
+    .sitemap-main {
+        gap: 0;
+    }
+
 }
 
 @media screen and (max-width: 770px) {
@@ -786,13 +823,15 @@ footer li {
         flex-direction: column;
         align-items: unset;
         justify-content: center;
-        padding: 0 32px;
+        padding: 0 16px;
         gap: 0;
     }
 
     .footer-footer {
-        padding: 32px;
+        margin-top: 0px;
+        padding: 16px;
         justify-content: space-between;
+        gap: 0;
     }
 
 }
